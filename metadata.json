@@ -1,0 +1,8 @@
+{
+  "name": "Raihan Gusti Anugrah Portfolio",
+  "description": "Editorial portfolio of Raihan Gusti Anugrah showcasing web development, graphic design, and digital marketing projects.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
