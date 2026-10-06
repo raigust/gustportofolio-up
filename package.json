@@ -6,11 +6,7 @@
     "#/*": "./src/*"
   },
   "scripts": {
-<<<<<<< HEAD
     "dev": "vite dev --host 0.0.0.0 --port 3000",
-=======
-    "dev": "vite dev --port 3000",
->>>>>>> a3b46a5e338e404a84131df6c3c725feacd87bb7
     "generate-routes": "tsr generate",
     "build": "vite build",
     "preview": "vite preview",
@@ -47,14 +43,5 @@
     "prettier": "^3.8.1",
     "typescript": "^6.0.2",
     "vite": "^8.0.0"
-<<<<<<< HEAD
-=======
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild",
-      "lightningcss"
-    ]
->>>>>>> a3b46a5e338e404a84131df6c3c725feacd87bb7
   }
 }

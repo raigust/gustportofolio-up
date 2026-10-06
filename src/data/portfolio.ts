@@ -20,12 +20,9 @@ import myApparelLogin from "@/assets/myapparel-login.png";
 import myApparelCart from "@/assets/myapparel-carthomepage.png";
 import myApparelOrder from "@/assets/myapparel-order.png";
 import myApparelProfile from "@/assets/myapparel-profile.png";
-<<<<<<< HEAD
 import madingUbImg from "@/assets/mading-ub.png";
 import malangFestImg from "@/assets/malangfestival.png";
 import serbaOtomasiImg from "@/assets/serbaotomasi.png";
-=======
->>>>>>> a3b46a5e338e404a84131df6c3c725feacd87bb7
 
 export const profile = {
   name: "Raihan Gusti Anugrah",
@@ -83,7 +80,6 @@ export type Certification = {
 
 export const projects: Project[] = [
   {
-<<<<<<< HEAD
     id: "mading-ub",
     title: "Mading Ub Pusat Informasi",
     category: "Web Developer",
@@ -135,8 +131,6 @@ export const projects: Project[] = [
     ],
   },
   {
-=======
->>>>>>> a3b46a5e338e404a84131df6c3c725feacd87bb7
     id: "figma-jersey",
     title: "Figma Jersey Design App",
     category: "Graphic Design",
@@ -282,11 +276,7 @@ export const stats = [
   { value: "89.575", label: "Grade at SMK Telkom Malang" },
   { value: "640", label: "TOEIC score" },
   { value: "575", label: "UKBI score" },
-<<<<<<< HEAD
   { value: "11", label: "Selected projects" },
-=======
-  { value: "8", label: "Selected projects" },
->>>>>>> a3b46a5e338e404a84131df6c3c725feacd87bb7
 ];
 
 export const services = [

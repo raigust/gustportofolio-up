@@ -19,10 +19,7 @@ export function Gallery() {
   return (
     <>
       <div className="p-3 sm:p-4 lg:p-6">
-<<<<<<< HEAD
         {/* Minimalist Section Header */}
-=======
->>>>>>> a3b46a5e338e404a84131df6c3c725feacd87bb7
         <div className="mb-4 flex items-end justify-between gap-4 border-b border-black/15 pb-3 lg:mb-5">
           <div>
             <p className="mb-1 flex items-center gap-2 font-mono text-[0.62rem] uppercase tracking-[0.18em] text-black/45">
@@ -33,7 +30,6 @@ export function Gallery() {
               Web interface archive
             </h2>
           </div>
-<<<<<<< HEAD
           <span className="shrink-0 font-mono text-[0.62rem] text-black/45">
             {webProjects.length.toString().padStart(2, "0")} projects
           </span>
@@ -122,50 +118,6 @@ export function Gallery() {
       </div>
 
       {/* Case Study Detail Modal */}
-=======
-          <span className="shrink-0 font-mono text-[0.62rem] text-black/45">03 projects</span>
-        </div>
-
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-5">
-        {webProjects.map((project, index) => (
-          <button
-            key={project.id}
-            type="button"
-            onClick={() => openProject(project)}
-            aria-label={`Open ${project.title} project details`}
-            className={`group overflow-hidden rounded-xl border border-[#263442] bg-[#17212b] text-left shadow-[0_12px_30px_rgba(15,23,42,0.28)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#3b4d5d] hover:shadow-[0_18px_38px_rgba(15,23,42,0.38)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${index === 0 ? "sm:col-span-2" : ""}`}
-          >
-            <span className="flex h-7 items-center gap-1.5 border-b border-[#334454] bg-[#202c38] px-3">
-              <span className="h-2 w-2 rounded-full bg-[#ff5f57]" />
-              <span className="h-2 w-2 rounded-full bg-[#febc2e]" />
-              <span className="h-2 w-2 rounded-full bg-[#28c840]" />
-              <span className="ml-2 min-w-0 flex-1 truncate rounded bg-[#111923] px-2 py-0.5 text-[0.55rem] text-white/45">
-                {project.title.toLowerCase().replaceAll(" ", "-")}.local
-              </span>
-            </span>
-            <span className="block overflow-hidden bg-[#111]">
-              <img
-                src={project.src}
-                alt={`${project.title} project website preview`}
-                width={project.width}
-                height={project.height}
-                loading={index === 0 ? "eager" : "lazy"}
-                decoding="async"
-                fetchPriority={index === 0 ? "high" : "auto"}
-                className="block h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                style={{ aspectRatio: index === 0 ? "24 / 9" : "16 / 10" }}
-              />
-            </span>
-            <span className="flex items-center justify-between gap-3 border-t border-[#334454] bg-[#17212b] px-3 py-2.5">
-              <span className="min-w-0 truncate text-xs font-semibold text-white/85">{project.title}</span>
-              <span className="shrink-0 font-mono text-[0.58rem] text-white/45">{project.year} / {project.client}</span>
-            </span>
-          </button>
-        ))}
-        </div>
-      </div>
-
->>>>>>> a3b46a5e338e404a84131df6c3c725feacd87bb7
       {active && (
         <div
           className="fixed inset-0 z-50 flex justify-end bg-background/70 backdrop-blur-sm animate-fade-in"
@@ -192,22 +144,15 @@ export function Gallery() {
                 <X className="h-4 w-4" aria-hidden="true" />
               </button>
             </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> a3b46a5e338e404a84131df6c3c725feacd87bb7
             <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_12rem]">
               <img
                 src={active.screenshots[activeScreenshot]?.src ?? active.src}
                 alt={`${active.title} ${active.screenshots[activeScreenshot]?.label ?? "project"} screen`}
                 width={active.screenshots[activeScreenshot]?.width ?? active.width}
                 height={active.screenshots[activeScreenshot]?.height ?? active.height}
-<<<<<<< HEAD
                 referrerPolicy="no-referrer"
                 className="max-h-[62vh] w-full rounded-lg border border-hairline object-contain bg-black/40"
-=======
-                className="max-h-[62vh] w-full rounded-lg border border-hairline object-contain"
->>>>>>> a3b46a5e338e404a84131df6c3c725feacd87bb7
               />
               <div className="flex gap-2 overflow-x-auto lg:flex-col">
                 {active.screenshots.map((screen, index) => (
@@ -217,39 +162,26 @@ export function Gallery() {
                     onClick={() => setActiveScreenshot(index)}
                     aria-label={`Show ${screen.label} screenshot`}
                     aria-pressed={activeScreenshot === index}
-<<<<<<< HEAD
                     className={`w-28 shrink-0 text-left lg:w-full ${
                       activeScreenshot === index ? "text-foreground" : "text-muted-foreground"
                     }`}
-=======
-                    className={`w-28 shrink-0 text-left lg:w-full ${activeScreenshot === index ? "text-foreground" : "text-muted-foreground"}`}
->>>>>>> a3b46a5e338e404a84131df6c3c725feacd87bb7
                   >
                     <img
                       src={screen.src}
                       alt={`${active.title} ${screen.label} thumbnail`}
                       width={screen.width}
                       height={screen.height}
-<<<<<<< HEAD
                       referrerPolicy="no-referrer"
                       className={`aspect-video w-full rounded-md border object-cover ${
                         activeScreenshot === index ? "border-foreground" : "border-hairline"
                       }`}
                     />
                     <span className="mt-1 block text-xs truncate">{screen.label}</span>
-=======
-                      className={`aspect-video w-full rounded-md border object-cover ${activeScreenshot === index ? "border-foreground" : "border-hairline"}`}
-                    />
-                    <span className="mt-1 block text-xs">{screen.label}</span>
->>>>>>> a3b46a5e338e404a84131df6c3c725feacd87bb7
                   </button>
                 ))}
               </div>
             </div>
-<<<<<<< HEAD
 
-=======
->>>>>>> a3b46a5e338e404a84131df6c3c725feacd87bb7
             <dl className="mt-5 grid grid-cols-2 gap-4">
               <div>
                 <dt className="label-caps">Client</dt>
@@ -260,25 +192,16 @@ export function Gallery() {
                 <dd className="text-sm">{active.year}</dd>
               </div>
             </dl>
-<<<<<<< HEAD
 
             <p className="mt-5 text-sm font-medium">{active.summary}</p>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{active.details}</p>
 
-=======
-            <p className="mt-5 text-sm font-medium">{active.summary}</p>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{active.details}</p>
->>>>>>> a3b46a5e338e404a84131df6c3c725feacd87bb7
             {active.link && (
               <a
                 href={active.link}
                 target="_blank"
                 rel="noreferrer noopener"
-<<<<<<< HEAD
                 className="mt-6 inline-flex h-11 items-center gap-2 rounded-full bg-primary px-5 text-sm font-medium text-primary-foreground transition-transform duration-200 hover:scale-[1.02]"
-=======
-                className="mt-6 inline-flex h-11 items-center gap-2 rounded-full bg-primary px-5 text-sm font-medium text-primary-foreground"
->>>>>>> a3b46a5e338e404a84131df6c3c725feacd87bb7
               >
                 View live site <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
               </a>
