@@ -39,8 +39,12 @@ function describeStatus(error: Error): string {
 
 function safeStringify(value: unknown): string {
   try {
+<<<<<<< HEAD
     const json = JSON.stringify(value);
     return typeof json === "string" ? json : String(value);
+=======
+    return JSON.stringify(value) ?? String(value);
+>>>>>>> a3b46a5e338e404a84131df6c3c725feacd87bb7
   } catch {
     return String(value);
   }
@@ -64,9 +68,15 @@ console.error = (...args: unknown[]) => {
 };
 
 if (typeof globalThis.addEventListener === "function") {
+<<<<<<< HEAD
   globalThis.addEventListener("error", (event) => record((event).error ?? event));
   globalThis.addEventListener("unhandledrejection", (event) =>
     record((event).reason),
+=======
+  globalThis.addEventListener("error", (event) => record((event as ErrorEvent).error ?? event));
+  globalThis.addEventListener("unhandledrejection", (event) =>
+    record((event as PromiseRejectionEvent).reason),
+>>>>>>> a3b46a5e338e404a84131df6c3c725feacd87bb7
   );
 }
 

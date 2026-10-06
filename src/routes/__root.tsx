@@ -98,8 +98,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700,800&display=swap",
       },
+<<<<<<< HEAD
       { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
       { rel: "alternate icon", href: "/favicon.ico", type: "image/x-icon" },
+=======
+      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+>>>>>>> a3b46a5e338e404a84131df6c3c725feacd87bb7
     ],
   }),
   shellComponent: RootShell,
