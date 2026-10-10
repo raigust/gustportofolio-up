@@ -23,6 +23,7 @@ import myApparelProfile from "@/assets/myapparel-profile.png";
 import madingUbImg from "@/assets/mading-ub.png";
 import malangFestImg from "@/assets/malangfestival.png";
 import serbaOtomasiImg from "@/assets/serbaotomasi.png";
+import diaferaStudioImg from "@/assets/diafera-studio.png";
 
 export const profile = {
   name: "Raihan Gusti Anugrah",
@@ -79,6 +80,23 @@ export type Certification = {
 };
 
 export const projects: Project[] = [
+  {
+    id: "diafera-studio",
+    title: "Diaféra Studio",
+    category: "Web Developer",
+    year: "2026",
+    src: diaferaStudioImg,
+    width: 1920,
+    height: 1080,
+    client: "Diaféra Studio (Bandung)",
+    summary: "Website fullstack studio foto dengan reservasi private session minimalis, kalender booking slot real-time, dan portofolio karya.",
+    details:
+      "Website fullstack untuk Diaféra Studio di Bandung dengan konsep private session minimalis. Frontend dibangun menggunakan Next.js / Vite dan Tailwind CSS, backend REST API Express.js, library schema Prisma ORM yang terintegrasi dengan database Supabase (PostgreSQL), serta dilengkapi fitur kalender interaktif untuk reservasi dan pengecekan jadwal slot secara real-time.",
+    link: "https://studiofoto-hazel.vercel.app/",
+    screenshots: [
+      { id: "cover", label: "Diaféra Studio Homepage & Booking", src: diaferaStudioImg, width: 1920, height: 1080 },
+    ],
+  },
   {
     id: "mading-ub",
     title: "Mading Ub Pusat Informasi",
@@ -276,13 +294,13 @@ export const stats = [
   { value: "89.575", label: "Grade at SMK Telkom Malang" },
   { value: "640", label: "TOEIC score" },
   { value: "575", label: "UKBI score" },
-  { value: "11", label: "Selected projects" },
+  { value: "12", label: "Selected projects" },
 ];
 
 export const services = [
   {
     title: "Web Development",
-    items: ["Next.js", "Node.js", "Express.js", "Prisma", "MySQL"],
+    items: ["Next.js", "Vite", "Node.js", "Express.js", "Prisma", "Supabase", "MySQL"],
   },
   {
     title: "Graphic Design",
@@ -297,9 +315,11 @@ export const services = [
 export const stack = [
   { name: "Figma", use: "UI/UX design", mark: "F", color: "#f24e1e" },
   { name: "Next.js", use: "Frontend development", mark: "N", color: "#ffffff" },
+  { name: "Vite", use: "Frontend tooling", mark: "V", color: "#646cff" },
   { name: "Node.js", use: "Backend runtime", mark: "JS", color: "#8cc84b" },
   { name: "Express.js", use: "API server", mark: "E", color: "#d6d3d1" },
-  { name: "Prisma", use: "ORM & database access", mark: "P", color: "#2d3748" },
+  { name: "Prisma", use: "ORM & schema modelling", mark: "P", color: "#2d3748" },
+  { name: "Supabase", use: "Database & real-time", mark: "SB", color: "#3ecf8e" },
   { name: "MySQL", use: "Database", mark: "SQL", color: "#f29111" },
   { name: "Canva", use: "Graphic design", mark: "C", color: "#00c4cc" },
   { name: "Photoshop", use: "Image editing", mark: "Ps", color: "#31a8ff" },

@@ -82,7 +82,7 @@ export function Gallery() {
                   decoding="async"
                   referrerPolicy="no-referrer"
                   className="block w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.015]"
-                  style={{ aspectRatio: "24 / 10" }}
+                  style={{ aspectRatio: "16 / 9" }}
                 />
               </div>
 
